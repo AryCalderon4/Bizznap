@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Ionic Blank
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label floating>Calle:<span class="red">*</span></ion-label>
+    <ion-input type="text" [(ngModel)]="calle"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>Fracc:<span class="red">*</span></ion-label>
+    <ion-input type="text" [(ngModel)]="fracc"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>C.P.(opcional):</ion-label>
+    <ion-input type="number" [(ngModel)]="cp"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>Estado:<span class="red">*</span></ion-label>
+    <ion-input type="text" [(ngModel)]="estado"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>Municipio:<span class="red">*</span></ion-label>
+    <ion-input type="text" [(ngModel)]="municipio"></ion-input>
+  </ion-item>    
+
+  <ion-item>
+    <ion-label floating>País:<span class="red">*</span></ion-label>
+    <ion-input type="text" [(ngModel)]="pais"></ion-input>
+  </ion-item>
+
+  <button ion-button block (click)="putLatLong()" color="dark"  outline round small>Actualizar marcador</button>
+
+  <div id="map" style="width:100%; height:350px;"></div>
+
+</ion-content>
