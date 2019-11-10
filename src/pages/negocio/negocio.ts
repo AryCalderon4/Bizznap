@@ -16,11 +16,12 @@ import { RestProvider } from '../../providers/rest/rest';
 export class NegocioPage {
   users: any;
   constructor(public navCtrl: NavController, public navParams: NavParams, public restProvider: RestProvider) {
-    this.getUsers();
+   // this.getUsers();
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad NegocioPage');
+    this.getUsers();
   }
 
   getUsers() {

@@ -17,50 +17,51 @@ Categoria-->
     <ion-list no-lines class="inputs">
 
         <ion-item>
-          <ion-input class="Nombre del Negocio" type="text" placeholder="Nombre">
+          <ion-input class="Nombre del Negocio" type="text" [(ngModel)]='Nombre' placeholder="Nombre" >
           </ion-input>
         </ion-item>
     
         <ion-item>
-          <ion-input class="Descripcion" type="text" placeholder="Descripcion">
+          <ion-input class="Descripcion" type="text" [(ngModel)]='Descripcion' placeholder="Descripcion">
           </ion-input>
         </ion-item>
         <ion-item>
-            <ion-input class="Celular" type="text" placeholder="Celular">
+            <ion-input class="Celular" type="text" [(ngModel)]='Celular' placeholder="Celular">
         </ion-input>
         </ion-item>
 
          <ion-item>
-          <ion-input class="Email" type="text" placeholder="Email">
+          <ion-input class="Email" type="text" [(ngModel)]='Email' placeholder="Email">
           </ion-input>
         </ion-item>
     
         <ion-item>
-            <ion-input class="Horarios" type="text" placeholder="Horarios">
+            <ion-input class="Horarios" type="text" [(ngModel)]='Horarios' placeholder="Horarios">
             </ion-input>
         </ion-item>
 
         <ion-item>
-          <ion-input class="Fotos" type="text" placeholder="Fotos">
+          <ion-input class="Fotos" type="text" [(ngModel)]='Fotos' placeholder="Fotos">
           </ion-input>
         </ion-item>
 
         <ion-item>
-          <ion-input class="Logo" type="text" placeholder="Logo">
+          <ion-input class="Logo" type="text" [(ngModel)]='Logo' placeholder="Logo">
           </ion-input>
         </ion-item>
 
         <ion-item>
-          <ion-input class="Productos" type="text" placeholder="Productos">
+          <ion-input class="Productos" type="text" [(ngModel)]='Productos' placeholder="Productos">
           </ion-input>
         </ion-item>
           
         <ion-item>
-          <ion-input class="Categoria" type="text" placeholder="Categoria">
+          <ion-input class="Categoria" type="text" [(ngModel)]='Categoria' placeholder="Categoria">
           </ion-input>
         </ion-item>
     </ion-list>
-    <button ion-button>Guardar</button>
+    <button ion-button (click)="postParams()">Guardar</button>
+    <button ion-button (click)="test()">Test</button>
     <button ion-button  [navPush]="mapa">Ingresar mapa</button>
     <button ion-button  [navPush]="negocio">Ver negocio</button>
 </ion-content>

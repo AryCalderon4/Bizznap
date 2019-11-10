@@ -13,8 +13,9 @@ export class RestProvider {
   constructor(public http: HttpClient) {
     console.log('Hello RestProvider Provider');
   }
-  apiUrl = ' 192.168.0.46/api/negociosAll';
-
+  apiUrl = ' http://localhost:8000/api/negociosAll';
+  postNegocio = 'http://localhost:8000/api/negocios';
+  
   getUsers() {
     return new Promise(resolve => {
       this.http.get(this.apiUrl).subscribe(data => {
@@ -24,6 +25,14 @@ export class RestProvider {
         console.log(err);
       });
     });
+  }
+//cuando se envia un parametro debe ir dentro de la funcion
+  postParams(parametro){
+   // this.http.post(this.postNegocio + '?' + parametro)
+   this.http.post(this.postNegocio , parametro).subscribe(data => { 
+      console.log(data), err => {
+      console.log(err)}
+      });
   }
 
 }
