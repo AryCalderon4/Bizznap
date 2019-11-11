@@ -29,10 +29,12 @@ export class RestProvider {
 //cuando se envia un parametro debe ir dentro de la funcion
   postParams(parametro){
    // this.http.post(this.postNegocio + '?' + parametro)
-   this.http.post(this.postNegocio , parametro).subscribe(data => { 
+   return this.http.post(this.postNegocio , parametro).subscribe(data => { 
       console.log(data), err => {
       console.log(err)}
       });
   }
 
-}
+
+  }
+

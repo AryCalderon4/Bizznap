@@ -6,7 +6,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import{NativeGeocoder} from '@ionic-native/native-geocoder';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import {LoginPage,RegistroPage, NegocioPage} from "../pages/index.pages"
+import {LoginPage,RegistroPage, NegocioPage, DnegocioPage, MapaPage} from "../pages/index.pages"
 
 import { HttpClientModule } from '@angular/common/http';
 import { RestProvider } from '../providers/rest/rest';
@@ -17,6 +17,8 @@ import { RestProvider } from '../providers/rest/rest';
     LoginPage,
     RegistroPage,
     NegocioPage,
+    DnegocioPage,
+    MapaPage,
     HomePage
   ],
   imports: [
@@ -30,6 +32,8 @@ import { RestProvider } from '../providers/rest/rest';
     LoginPage,
     RegistroPage,
     NegocioPage,
+    DnegocioPage,
+    MapaPage,
     HomePage
   ],
   providers: [

@@ -1,1 +1,35 @@
-<ion-nav [root]="rootPage"></ion-nav>
+<ion-menu [content]="content">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Paginas</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+
+    
+          
+        <button ion-item (click)="abrirPagina(home)">
+          Ubicacion
+        </button>
+
+        <button ion-item (click)="abrirPagina(registro)">
+          Registro
+        </button>
+
+        <button ion-item (click)="abrirPagina(negocio)">
+          Negocio
+        </button>
+        <button ion-item (click)="abrirPagina(mapa)">
+            Mapa
+        </button>
+       
+
+  
+
+      
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+<ion-nav [root]="rootPage" #content ></ion-nav>

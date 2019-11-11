@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import {HomePage, NegocioPage} from "../index.pages";
+import {HomePage, NegocioPage} from '../index.pages';
 import { RestProvider } from '../../providers/rest/rest';
 /**
  * Generated class for the RegistroPage page.
@@ -46,19 +46,20 @@ export class RegistroPage {
     console.log('ionViewDidLoad RegistroPage');
     
   }
+ 
 
   postParams(){
-    let params={
+   let  params = {
+    Nombre: this.Nombre,
     Descripcion: this.Descripcion,
     Celular: this.Celular,
     Email: this.Email,
     Horarios: this.Horarios,
-    Fotos: this.Fotos,
-    Logo: this.Logo,
+    Fotos: this.Fotos ,
+    Logo: this.Logo ,
     Productos: this.Productos,
-    Categoria: this.Categoria
-    }
-    
+    Categoria: this.Categoria 
+   }
     this.restProvider.postParams(params);
     console.log(params);
   }

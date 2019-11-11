@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { RestProvider } from '../../providers/rest/rest';
+import {DnegocioPage} from "../index.pages";
 /**
  * Generated class for the NegocioPage page.
  *
@@ -30,6 +31,12 @@ export class NegocioPage {
       this.users = data;
       console.log(this.users);
     });
+  }
+
+  detalles(){
+    console.log(this.users); 
+
+  this.navCtrl.push(DnegocioPage ,{'user': this.users}); 
   }
 
 }
