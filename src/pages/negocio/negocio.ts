@@ -33,10 +33,7 @@ export class NegocioPage {
     });
   }
 
-  detalles(){
-    console.log(this.users); 
-
-  this.navCtrl.push(DnegocioPage ,{'user': this.users}); 
+  detalles(user){
+    this.navCtrl.setRoot(DnegocioPage,user);
   }
-
 }
