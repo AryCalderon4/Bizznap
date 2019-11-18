@@ -16,8 +16,10 @@ import {DnegocioPage} from "../index.pages";
 })
 export class NegocioPage {
   users: any;
+  items:any;
+  newData: any =[];
   constructor(public navCtrl: NavController, public navParams: NavParams, public restProvider: RestProvider) {
-   // this.getUsers();
+    
   }
 
   ionViewDidLoad() {
@@ -36,4 +38,24 @@ export class NegocioPage {
   detalles(user){
     this.navCtrl.setRoot(DnegocioPage,user);
   }
+
+ 
+   getItems(ev: any) {
+    //Obtener valor del text box
+    let val = ev.target.value;
+
+        if (val && val.trim() != '') {
+            console.log("STRING DETECTED")
+            this.users = this.users.filter((user) => {
+                return (user.Productos.toLowerCase().includes(val.toLowerCase()))
+            });
+            //En caso de pulsar cancel, reestablecer los cambios
+          } else if (val == '' || val == undefined) {
+            console.log("pulsaste cancel");
+            this.users.length = 0;
+            this.getUsers();
+        }
+    }
+    
+
 }

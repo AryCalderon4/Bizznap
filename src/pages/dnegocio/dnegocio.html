@@ -5,23 +5,21 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-  <ion-navbar>
-    <ion-title></ion-title>
+  <ion-navbar color="header" style= "text-align:center; ">
+    <ion-title>Bizznap</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
   
   <h2>{{user.Nombre}} </h2>
-  <img src="/src/assets/imgs/placeholder.png" alt="imagen1">
-  <p text-center> {{user.Descripcion}} </p>
-  <p text-center> {{user.Celular}} </p>
-  <p text-center> {{user.Email}} </p>
-  <p text-center> {{user.Horario}} </p>
-  <p text-center> {{user.Foto}} </p>
-  <p text-center> {{user.Logo}} </p>
-  <p text-center> {{user.Productos}} </p>
-  <p text-center> {{user.Categoria}} </p>
+  <img src="assets/imgs/target.png" alt="User">
+  <p> {{user.Descripcion}} </p>
+  <p> Tel. {{user.Celular}} </p>
+  <p> Correo: {{user.Email}} </p>
+  <p> Horario: {{user.Horario}} </p>
+  <p> Productos: {{user.Productos}} </p>
+  
 
 
 </ion-content>

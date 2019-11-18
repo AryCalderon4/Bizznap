@@ -5,10 +5,10 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-  <ion-navbar>
-    <ion-title>login</ion-title>
+  <ion-navbar color="header" style= "text-align:center; ">
+    <ion-title>Bizznap</ion-title>
 
-    <ion-buttons left>
+    <ion-buttons left color="menu">
       <button ion-button icon-only (click)="mostrarMenu()">
         <ion-icon name="menu"></ion-icon>
       </button>
@@ -18,22 +18,22 @@
 
 <ion-content padding>
 
-  <img src="assets/imgs/user.png" alt="User">
+  <img src="assets/imgs/target.png" alt="User">
 
-  <ion-list no-lines class="inputs">
+  <ion-list no-lines class="inputs" style="margin-top:95px">
 
     <ion-item>
-      <ion-input class="inUsername" type="text" placeholder="Nombre">
+      <ion-input class="inUsername" type="text"  [(ngModel)]='Correo' placeholder="Nombre">
       </ion-input>
     </ion-item>
 
     <ion-item>
-      <ion-input class="inPassword" type="password" placeholder="Contraseña">
+      <ion-input class="inPassword" type="password"  [(ngModel)]='Contrasena' placeholder="Contraseña">
       </ion-input>
     </ion-item>
 
     <ion-item>
-      <button (click)="login()" class="singIn" ion-button round block>
+      <button (click)="postUsers()" class="singIn" ion-button round block>
         Ingresar
       </button>
     </ion-item>¿Aun no te registras?

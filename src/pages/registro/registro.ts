@@ -29,7 +29,7 @@ export class RegistroPage {
   Categoria: any; 
   //datos:FormGroup;
   NuevoNegocio: any;
-  
+  items:any;
   params = {}
    /* Nombre: this.datos.get Nombre,
     Descripcion: this.datos.get Descripcion,
@@ -61,6 +61,7 @@ export class RegistroPage {
       Productos:['', Validators.required], 
       Categoria:['', Validators.required]
     });*/
+    
   }
 
   ionViewDidLoad() {
@@ -84,6 +85,10 @@ export class RegistroPage {
         this.restProvider.postParams(params);
         console.log(params);
       }
+
+  
+ }
+
     /*
     this.NuevoNegocio= {
     Nombre: this.datos.get ('Nombre'),
@@ -102,6 +107,6 @@ export class RegistroPage {
   */
 
  
-}
+
 
 
